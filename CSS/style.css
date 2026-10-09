@@ -1,0 +1,387 @@
+:root {
+    --bg: #0a0f0d;
+    --card: #0F1713;
+    --green: #00FF66;
+    --text: #E6E6E6;
+    --border: #164d32;
+}
+
+@font-face {
+    font-family: "UbuntuMono";
+    src: url("../Fonts/UbuntuMono-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: "UbuntuMono", monospace;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*====================
+        Header
+  ====================*/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: var(--card);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.logo-container h1 {
+    color: var(--green);
+    font-size: 24px;
+    letter-spacing: 2px;
+}
+
+.logo-container a {
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    position: relative;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 18px;
+    transition: 0.25s ease-in-out;
+}
+
+nav a::before {
+    content: "> ";
+    position: absolute;
+    left: -15px;
+    color: var(--green);
+    opacity: 0;
+    transition: 0.25s ease-in-out; 
+}
+
+nav a:hover {
+    color: #00B84F;
+}
+
+nav a:hover::before {
+    opacity: 1;
+}
+
+/*====================
+        Hero
+====================*/
+
+.hero {
+    min-height: calc(100vh - 111px);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    padding: 60px 8%;
+}
+
+.hero-content {
+    max-width: 650px;
+    min-width: 0;
+}
+
+.hello {
+    color: var(--green);
+    font-size: 16px;
+    margin-bottom: 25px;
+}
+
+.hero-content h2 {
+    font-size: 28px;
+    line-height: 1.4;
+    margin-bottom: 15px;
+}
+
+.name {
+    color: var(--green);
+}
+
+.description {
+    color: var(--text);
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 550px;
+    margin-top: 25px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.hero-buttons a {
+    display: inline-block;
+    padding: 12px 18px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 14px;
+    border: 1px solid var(--green);
+    transition: 0.25s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--green);
+    color: var(--bg);
+}
+
+.btn-primary:hover {
+    background-color: transparent;
+    color: var(--green);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--green);
+}
+
+.btn-secondary:hover {
+    background-color: var(--green);
+    color: var(--bg);
+}
+
+/*====================
+        Terminal
+====================*/
+
+.terminal {
+    min-width: 0;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    box-shadow: 8px 8px 0 rgba(0, 255, 102, 0.04);
+}
+
+.terminal-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background-color: #121a17;
+    border-bottom: 1px solid var(--border);
+}
+
+.terminal-dots {
+    display: flex;
+    gap: 6px;
+}
+
+.terminal-dots span {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.terminal-dots span:nth-child(2) {
+    background-color: yellow;
+}
+
+.terminal-dots span:nth-child(3) {
+    background-color: green;
+}
+
+.terminal-header p {
+    color: var(--text);
+    font-size: 13px;
+}
+
+.terminal-status {
+    margin-left: auto;
+    color: var(--green);
+    font-size: 11px;
+}
+
+.terminal-body {
+    padding: 25px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.command {
+    color: var(--green);
+    margin-top: 18px;
+}
+
+.command:first-child {
+    margin-top: 0;
+}
+
+.output {
+    color: var(--text);
+    padding-left: 15px;
+}
+
+.cursor {
+    display: inline-block;
+    width: 9px;
+    height: 17px;
+    background-color: var(--green);
+    vertical-align: middle;
+    animation: blink 1s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+}
+
+/*====================
+        Projects
+====================*/
+
+.projects {
+    background-color: #121a17;
+    padding: 80px 8%;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card);
+    border: 2px solid var(--border);
+    width: 300px;
+    min-height: 400px;
+    padding: 15px;
+}
+
+.card:hover {
+    box-shadow: 3px 3px rgba(0, 255, 102, 0.12);
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    color: var(--green);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.card a {
+    text-decoration: none;
+}
+
+.card p {
+    color: var(--text);
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+/*====================
+        Contact
+====================*/
+
+.contact {
+    background-color: #16201c;
+    padding: 80px 8%;
+    border-top:1px solid var(--border);
+}
+
+.contact h2 {
+    color: var(--text);
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.contact h2 span {
+    color: var(--green);
+}
+
+.contact-description {
+    color: #a6b0a9;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.contact-item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    padding: 20px;
+    width: 250px;
+    overflow-wrap: anywhere;
+    /* transition: 0.25s ease-in-out; */
+}
+
+.contact-item:hover {
+    border-color: var(--green);
+    transform: translateY(-4px);
+    box-shadow: 3px 3px rgba(0, 255, 102, 0.12);
+}
+
+.contact-label {
+    color: var(--green);
+    font-size: 14px;
+}
+
+.contact-item a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.25s ease-in-out;
+}
+
+.contact-item a:hover {
+    color: var(--green);
+}
+
+/*====================
+        Footer
+====================*/
+
+footer {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: var(--card);
+    border-top: 1px solid var(--border);
+    color: #a6b0a9;
+    font-size: 14px;
+    text-align: center;
+}

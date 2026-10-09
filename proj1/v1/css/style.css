@@ -1,0 +1,221 @@
+body {
+    background-color: white;
+}
+
+.profile-card {
+    width: 50%;
+    margin: 0 auto;
+    border: 5px solid #800020;
+    border-radius: 20px;
+    background-color: blueviolet;
+    box-shadow: 5px 5px black;
+}
+
+.image {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.student-image {
+    width: 200px;
+    border: 3px solid #800020;
+}
+
+.student-info {
+    background-color: rgb(103, 182, 238);
+    border: 3px solid #800020;
+    display: block;
+    border-top: 6px solid #800020;
+    border-bottom: 6px solid #800020;
+
+}
+
+.student-skills {
+    background-color: rgb(103, 182, 238);
+    border: 3px solid #800020;
+    border-bottom: 6px solid #800020;
+    border-top: 6px solid #800020;
+
+    /* border-bottom-left-radius: 17px;
+    border-bottom-right-radius: 17px; */
+}
+
+h4 {
+    color: white;
+    background-color: black;
+    display: inline-block;
+    border: 3px solid #800020;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px;
+}
+
+h5 {
+    color: white;
+    display: inline-block;
+    background-color: rgb(0, 0, 0);
+    padding: 10px;
+    border: 3px solid #800020;
+    border-radius: 10px;
+    transition: 0.23s ease-in-out;
+    margin: 10px;
+}
+
+h5:hover {
+    background-color: white;
+    color: black;
+}
+
+.link {
+    border: 3px solid #800020;
+    border-top: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    padding: 10px;
+    display: inline-block;
+    border-bottom-left-radius: 14px;
+    color: inherit;
+    background-color: rgb(65, 40, 3);
+    color: #ffffff;
+    transition: 0.23s ease-in-out;
+    text-decoration: none;
+}
+
+.link:hover {
+    background-color: wheat;
+    color: rgb(65, 40, 3); 
+}
+
+#name {
+    color: #800020;
+    font-style: italic;
+}
+
+#major {
+    color: #800020;
+    font-size: large;
+    font-style: italic;
+}
+
+span {
+    background-color: black;
+    color: aliceblue;
+    padding: 3px;
+    border: 2px solid yellowgreen;
+    border-radius: 10px;
+}
+
+/* =========================
+   📱 MOBILE RESPONSIVE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .profile-card {
+        width: 100%;
+        margin: 0 auto;
+        border-width: 4px;
+        border-radius: 15px;
+    }
+
+    .profile-card h1 {
+        padding-left: 0 !important;
+        text-align: center;
+        font-size: 28px;
+        margin: 15px 5px;
+    }
+
+    .image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .student-image {
+        width: 160px;
+        max-width: 80%;
+    }
+
+    .student-info {
+        padding: 12px;
+        text-align: center;
+        overflow-wrap: break-word;
+    }
+
+    .student-info h3 {
+        font-size: 18px;
+        line-height: 1.5;
+    }
+
+    .student-info p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    #major {
+        font-size: 16px;
+    }
+
+    span {
+        padding: 2px 4px;
+        display: inline-block;
+    }
+
+    .student-skills {
+        padding: 10px;
+        text-align: center;
+    }
+
+    h4 {
+        display: block;
+        width: fit-content;
+        margin: 5px auto 15px;
+    }
+
+    h5 {
+        margin: 5px;
+        padding: 8px 12px;
+    }
+
+    .link {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        border-right: 3px solid #800020;
+        border-radius: 0 0 10px 10px;
+        text-align: center;
+    }
+}
+
+
+/* =========================
+   📱 VERY SMALL PHONES
+   ========================= */
+
+@media (max-width: 380px) {
+
+    .profile-card h1 {
+        font-size: 24px;
+    }
+
+    .student-image {
+        width: 140px;
+    }
+
+    .student-info h3 {
+        font-size: 16px;
+    }
+
+    .student-info p {
+        font-size: 14px;
+    }
+
+    h5 {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+}
