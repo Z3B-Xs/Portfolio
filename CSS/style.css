@@ -75,7 +75,7 @@ nav a::before {
     left: -15px;
     color: var(--green);
     opacity: 0;
-    transition: 0.25s ease-in-out; 
+    transition: 0.25s ease-in-out;
 }
 
 nav a:hover {
@@ -309,7 +309,7 @@ nav a:hover::before {
 .contact {
     background-color: #16201c;
     padding: 80px 8%;
-    border-top:1px solid var(--border);
+    border-top: 1px solid var(--border);
 }
 
 .contact h2 {
