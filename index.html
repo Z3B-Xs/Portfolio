@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="images/Z3BE logo(3).png">
-    <link rel="stylesheet" href="CSS/style.css?v=footer-icons-20261119">
-    <title>Home</title>
+    <link rel="stylesheet" href="CSS/style.css?v=separate-pages-20261119">
+    <title>Home | Z3BE</title>
 </head>
 
-<body>
+<body id="page-top" class="page-home">
 
     <header>
 
@@ -19,14 +19,15 @@
             </a>
         </div>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
+        <nav aria-label="Main navigation">
+            <a href="index.html#home">Home</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
         </nav>
 
     </header>
 
+    <main>
     <section class="hero" id="home">
 
         <div class="hero-content">
@@ -44,8 +45,8 @@
             </p>
 
             <div class="hero-buttons">
-                <a href="#projects" class="btn-primary">VIEW PROJECTS</a>
-                <a href="#contact" class="btn-secondary">CONTACT ME</a>
+                <a href="projects.html" class="btn-primary">VIEW PROJECTS</a>
+                <a href="contact.html" class="btn-secondary">CONTACT ME</a>
             </div>
 
         </div>
@@ -89,86 +90,12 @@
         </div>
 
     </section>
-
-    <section class="projects" id="projects">
-
-        <div class="projects-container">
-
-            <div class="card">
-                <a href="https://z3b-xs.github.io/smart-city/" target="_blank"><img src="images/Amman Skyline Emblem Logo.webp" alt="Proj1"></a>
-                <a href="https://z3b-xs.github.io/smart-city/" target="_blank">
-                    <h2>Amman Smart City</h2>
-                </a>
-                <p>
-                    Amman Smart City is a website that showcases Amman’s history, landmarks, and essential services, presenting the city as a modern and connected destination.
-                </p>
-            </div>
-
-            <!-- <div class="card">
-                <p class="label">Project Under Development</p>
-                <a href="proj2/v1.1/html/indexv1.1.html" target="_blank"><img src="images/logo-3losh.jpg" alt="Proj1"></a>
-                <a href="proj2/v1.1/html/indexv1.1.html" target="_blank">
-                    <h2>Alloush Restaurant</h2>
-                </a>
-                <p>
-                    Alloush Restaurant is a modern restaurant website that showcases its menu, signature dishes, location, and contact information, making it easy for customers to explore and order their favorite meals.
-                </p>
-            </div> -->
-
-            <div class="card">
-                <a href="https://z3b-xs.github.io/z3be.web/" target="_blank"><img src="images/localhost127_circular_logo.png" alt="Proj1"></a>
-                <a href="https://z3b-xs.github.io/z3be.web/" target="_blank">
-                    <h2>Website Showcase</h2>
-                </a>
-                <p>
-                    A collection of website demos created to showcase different styles and ideas for businesses, shops, and brands. Explore the designs to see how your website could look and find the style that best fits your business.
-                </p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <section class="contact" id="contact">
-
-        <h2>Get In Touch<span>.</span></h2>
-
-        <p class="contact-description">
-            Have a project idea or want to connect?
-            Feel free to reach out.
-        </p>
-
-        <div class="contact-container">
-
-            <div class="contact-item">
-                <span class="contact-label">EMAIL:</span>
-                <a href="mailto:hello.z3be@gmail.com">
-                    hello.z3be@gmail.com
-                </a>
-            </div>
-
-            <div class="contact-item">
-                <span class="contact-label">INSTAGRAM:</span>
-                <a href="https://instagram.com/localhost127.dev" target="_blank" rel="noopener noreferrer">
-                    @localhost127.dev
-                </a>
-            </div>
-
-            <div class="contact-item">
-                <span class="contact-label">GITHUB:</span>
-                <a href="https://github.com/Z3B-Xs" target="_blank" rel="noopener noreferrer">
-                    @Z3B-Xs
-                </a>
-            </div>
-
-        </div>
-
-    </section>
+    </main>
 
     <footer class="site-footer">
         <div class="footer-content">
             <div class="footer-brand">
-                <a class="footer-logo" href="#home" aria-label="Z3BE — back to home">
+                <a class="footer-logo" href="index.html#home" aria-label="Z3BE — back to home">
                     <img src="images/Z3BE logo(3).png" alt="Z3BE logo" width="88" height="88" loading="lazy">
                 </a>
                 <p class="footer-description">Thoughtful design. Clean code. Websites built to bring your ideas to life.</p>
@@ -206,7 +133,7 @@
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 Z3BE. All rights reserved.</p>
-            <a href="#home">Back to top <span aria-hidden="true">↑</span></a>
+            <a href="#page-top">Back to top <span aria-hidden="true">↑</span></a>
         </div>
     </footer>
 

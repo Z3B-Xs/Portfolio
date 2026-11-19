@@ -650,3 +650,19 @@ nav a:hover::before {
         font-size: 14px;
     }
 }
+
+/* Shared layout for the home, projects and contact pages */
+body { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; }
+main { flex: 1; min-width: 0; }
+.page-projects main, .page-contact main { display: flex; flex-direction: column; }
+.page-projects .projects, .page-contact .contact { flex: 1; }
+.page-intro { margin-bottom: 36px; max-width: 650px; }
+.page-intro .hello { margin-bottom: 12px; }
+.page-intro h2 { font-size: 32px; margin-bottom: 15px; }
+.page-intro h2 span { color: var(--green); }
+.page-intro > p:last-child { color: #a6b0a9; line-height: 1.8; }
+.page-home nav a[href="index.html#home"],
+.page-projects nav a[href="projects.html"],
+.page-contact nav a[href="contact.html"] { color: var(--green); }
+nav a:focus-visible { outline: 2px solid var(--green); outline-offset: 6px; }
+@media (max-width: 600px) { .page-intro h2 { font-size: 28px; } }
